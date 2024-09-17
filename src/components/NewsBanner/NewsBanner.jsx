@@ -1,4 +1,5 @@
 import { formatTimeAgo } from "../../helpers/formatTimeAgo.js";
+import withSceleton from "../../helpers/hocs/withSceleton.jsx";
 import Image from "../image/Image.jsx";
 import styles from "./styles.module.css";
 
@@ -14,4 +15,6 @@ const NewsBanner = ({ item }) => {
   );
 };
 
-export default NewsBanner;
+const NewsBannerWithSceleton = withSceleton(NewsBanner, "banner", 1);
+
+export default NewsBannerWithSceleton;
